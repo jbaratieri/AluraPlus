@@ -16,8 +16,10 @@ body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
+    width: 100%;
+    
 
 }
 
@@ -56,12 +58,12 @@ body {
 }
 
 .container__aviso {
-    font-size: 12px;
+    font-size: 0.75em;
     color: var(--cinza-secundario);
 }
 
 .container__titulo {
-    font-size: 28px;
+    font-size: 1.75em;
 }
 
 .container__imagem {
@@ -83,7 +85,7 @@ body {
 
 .descricao__titulo {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3em;
     color: var(--branco-principal);
     margin-bottom: 0.1em;
 }
@@ -113,22 +115,24 @@ body {
 }
 
 .dispositivos__titulos {
-    font-size: 48px;
+    font-size: 3em;
     color: var(--branco-principal);
 }
 
 .lista__item {
-    font-size: 32px;
+    font-size: 2em;
     color: var(--branco-principal);
 }
  
 .rodape {
     text-align: center;
+    padding: 1em;
 }
 
 .rodape__lista {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     list-style-type: none;
     margin-top: 1em;
 }
@@ -136,7 +140,7 @@ body {
 
 .lista__link a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1em;
     color: var(--branco-principal);
     margin-left: 1em;
 }
@@ -155,6 +159,48 @@ body {
     color:brown;
 }
 
+@media screen and (max-width: 768px) {
 
+.principal {
+    background-image: none;
+}
+ 
+.img__background {
+    background-image: url("img/Background_mobile.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center top;
+}
 
+.container, .dispositivos__lista, .rodapé {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
 
+.container__caixa {
+    margin: 3em 1.5em 0 1.5em;
+}
+
+.secundario {
+    align-items: center;
+    margin: 3em 1.5em;
+    text-align: center;
+} 
+
+.column__reverse {
+    flex-direction: column-reverse;
+}
+
+.secundario__imagem {
+    width: 75%;
+}
+
+.botao {
+    margin: 2em 0;
+}
+
+.container_descricao {
+    margin-bottom: 3em;
+}
+}
